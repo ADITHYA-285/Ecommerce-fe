@@ -1,0 +1,30 @@
+.product-card {
+  width: 280px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin: 20px;
+  background: white;
+  color: black;
+}
+
+.product-card h2 {
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-stock {
+  margin-top: 10px;
+}
+
+.add-cart-button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
