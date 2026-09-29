@@ -53,7 +53,7 @@ function Register() {
 
       alert("Registration successful!");
 
-      navigate("/login");
+      navigate("/");
 
     } catch (error) {
 
