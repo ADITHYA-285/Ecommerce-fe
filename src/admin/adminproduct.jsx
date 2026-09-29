@@ -19,7 +19,7 @@ function AdminProducts() {
     const fetchProducts = async () => {
         try {
             const response = await fetch(
-                "http://localhost:3000/products"
+                `${API_URL}/products`
             );
 
             const data = await response.json();
@@ -49,7 +49,7 @@ function AdminProducts() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:3000/products",
+                `${API_URL}/products`,
                 {
                     method: "POST",
 
@@ -84,7 +84,7 @@ function AdminProducts() {
 
                 return;
             }
-            
+
             alert("Product added successfully!");
 
             // Clear form
@@ -118,7 +118,7 @@ function AdminProducts() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:3000/products/${productId}`,
+                `${API_URL}/products/${productId}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -156,7 +156,7 @@ function AdminProducts() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:3000/products/${editingProduct.id}`,
+                `${API_URL}/products/${editingProduct.id}`,
                 {
                     method: "PATCH",
                     headers: {

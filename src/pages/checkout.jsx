@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './checkout.css'
+import { API_URL } from "../config/api";
+
 
 function Checkout() {
   const navigate = useNavigate();
@@ -34,7 +36,7 @@ function Checkout() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:3000/cart",
+        `${API_URL}/cart`,
         {
           method: "GET",
           headers: {
@@ -119,7 +121,7 @@ function Checkout() {
       // Your backend already gets userId
       // from the JWT.
       const response = await fetch(
-        "http://localhost:3000/orders",
+        `${API_URL}/orders`,
         {
           method: "POST",
 

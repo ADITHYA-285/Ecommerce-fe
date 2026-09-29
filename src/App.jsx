@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "./context/cartcontext";
 import "./App.css";
+import { API_URL } from "./config/api";
 
 const App = () => {
 
@@ -22,7 +23,7 @@ const App = () => {
       try {
 
         const response = await fetch(
-          "http://localhost:3000/products"
+          `${API_URL}/products`
         );
 
         if (!response.ok) {

@@ -5,6 +5,8 @@ import React, {
   useState
 } from "react";
 
+import { API_URL } from "../config/api";
+
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -28,7 +30,7 @@ export const CartProvider = ({ children }) => {
       }
 
       const response = await fetch(
-        "http://localhost:3000/cart",
+        `${API_URL}/cart`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -93,7 +95,7 @@ export const CartProvider = ({ children }) => {
       }
 
       const response = await fetch(
-        "http://localhost:3000/cart/item",
+        `${API_URL}/cart/item`,
         {
           method: "POST",
 
@@ -149,7 +151,7 @@ export const CartProvider = ({ children }) => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:3000/cart/item",
+        `${API_URL}/cart/item`,
         {
           method: "POST",
 
@@ -202,7 +204,7 @@ export const CartProvider = ({ children }) => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:3000/cart/item/decrease",
+        `${API_URL}/cart/item/decrease`,
         {
           method: "PATCH",
 
@@ -254,7 +256,7 @@ export const CartProvider = ({ children }) => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:3000/cart/${item.productId}`,
+        `${API_URL}/${item.productId}`,
         {
           method: "DELETE",
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import './orderhistory.css'
+import { API_URL } from "../config/api";
+
 
 function OrderHistory() {
 
@@ -23,7 +25,7 @@ function OrderHistory() {
         );
 
       const response = await fetch(
-        `http://localhost:3000/orders/user/${user.id}`,
+        `${API_URL}/orders/user/${user.id}`,
         {
           headers: {
             Authorization:

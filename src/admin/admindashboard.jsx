@@ -18,7 +18,7 @@ function AdminDashboard() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:3000/orders",
+                `${API_URL}/orders`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
