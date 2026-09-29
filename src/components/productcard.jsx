@@ -21,7 +21,7 @@ function ProductCard({ product, addToCart }) {
 
      <button
   className="add-cart-button"
-  onClick={() => addToCart(product)}
+  onClick={() => addToCart(product.id)}
 >
   Add to Cart
 </button>
